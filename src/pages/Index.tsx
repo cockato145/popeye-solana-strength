@@ -1,5 +1,5 @@
+import Navbar from '@/components/Navbar';
 import HeroLogo from '@/components/HeroLogo';
-import SocialButtons from '@/components/SocialButtons';
 import CardGallery from '@/components/CardGallery';
 import AboutBox from '@/components/AboutBox';
 import PromptBox from '@/components/PromptBox';
@@ -11,11 +11,11 @@ import FinalLogo from '@/components/FinalLogo';
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Hero Section */}
       <HeroLogo />
-      
-      {/* Social Buttons (Top Nav) */}
-      <SocialButtons />
       
       {/* Card Gallery - Scrolling Collectibles */}
       <CardGallery />
