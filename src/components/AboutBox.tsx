@@ -23,6 +23,11 @@ const AboutBox = () => {
   return (
     <section className="py-16 px-4">
       <div className="max-w-2xl mx-auto">
+        {/* Title */}
+        <h2 className="font-display text-gold text-4xl md:text-5xl text-center text-shadow-gold mb-6">
+          ABOUT
+        </h2>
+        
         <div className="card-navy rounded-2xl p-8 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
@@ -33,26 +38,9 @@ const AboutBox = () => {
           
           {/* Content */}
           <div className="relative z-10">
-            <pre className="font-heading text-foreground text-center whitespace-pre-wrap text-lg leading-relaxed mb-8">
+            <pre className="font-heading text-foreground text-center whitespace-pre-wrap text-lg leading-relaxed">
               {aboutText}
             </pre>
-            
-            <button
-              onClick={handleCopy}
-              className="btn-gold w-full py-4 px-8 rounded-xl flex items-center justify-center gap-3"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-6 h-6" />
-                  <span>COPIED!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-6 h-6" />
-                  <span>COPY $POPEYE ABOUT</span>
-                </>
-              )}
-            </button>
           </div>
           
           {/* Corner Glow */}
