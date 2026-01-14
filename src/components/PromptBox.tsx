@@ -1,45 +1,33 @@
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 
-const promptText = `Inspired by classic strength.
-Powered by Solana.
-
-Strength doesn't show instantly.
-It appears when conviction is tested.
-
-No fake promises.
-No complex utility.
-
-Just memes, community,
-and strong holders.
-
-Eat Spinach. Hold Strong.`;
+const promptTemplate = `3D cartoon character inspired by Popeye-style strength, featuring {character type / theme}, exaggerated muscular arms, confident heroic pose, holding {object or item}, wearing {outfit style}, expressive face with bold cartoon features, smooth high-quality 3D render, soft lighting, vibrant color palette, clean background, playful meme-style, cinematic, ultra detailed`;
 
 const PromptBox = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(promptText);
+    await navigator.clipboard.writeText(promptTemplate);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-8 px-4">
       <div className="max-w-2xl mx-auto">
-        <div className="card-navy rounded-2xl p-8 relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, currentColor 10px, currentColor 11px)`
-            }} />
-          </div>
-          
-          {/* Content */}
+        {/* Instruction Text */}
+        <p className="text-center font-heading text-foreground/90 text-lg mb-4">
+          Change the name, object, and upload a reference image—choose whatever you like.
+        </p>
+        
+        <div className="card-navy rounded-2xl p-6 relative overflow-hidden">
+          {/* Prompt Text */}
           <div className="relative z-10">
-            <pre className="font-heading text-foreground text-center whitespace-pre-wrap text-lg leading-relaxed mb-8">
-              {promptText}
-            </pre>
+            <div className="bg-primary/50 rounded-xl p-4 mb-6">
+              <p className="font-heading text-foreground/90 text-base leading-relaxed">
+                {promptTemplate}
+              </p>
+            </div>
             
             <button
               onClick={handleCopy}
@@ -60,8 +48,7 @@ const PromptBox = () => {
           </div>
           
           {/* Corner Glow */}
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-spinach-glow/30 rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gold/20 rounded-full blur-3xl" />
+          <div className="absolute -top-16 -right-16 w-32 h-32 bg-secondary/30 rounded-full blur-2xl" />
         </div>
       </div>
     </section>
