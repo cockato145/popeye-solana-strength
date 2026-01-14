@@ -32,7 +32,7 @@ const CollectibleCard = ({ image, title, subtitle }: CollectibleCardProps) => {
   return (
     <div
       ref={cardRef}
-      className="relative w-72 h-96 cursor-pointer flex-shrink-0 mx-4"
+      className="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 cursor-pointer flex-shrink-0 mx-2 sm:mx-4"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ transform, transition: 'transform 0.15s ease-out' }}
@@ -54,11 +54,11 @@ const CollectibleCard = ({ image, title, subtitle }: CollectibleCardProps) => {
         </div>
         
         {/* Title Area */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-          <h3 className="font-display text-gold text-2xl text-shadow-gold tracking-wider">
+        <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 text-center">
+          <h3 className="font-display text-gold text-lg sm:text-xl md:text-2xl text-shadow-gold tracking-wider">
             {title}
           </h3>
-          <p className="font-heading text-foreground/80 text-sm mt-1">
+          <p className="font-heading text-foreground/80 text-xs sm:text-sm mt-1">
             {subtitle}
           </p>
         </div>

@@ -21,14 +21,14 @@ const AboutBox = () => {
   };
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-8 md:py-16 px-4">
       <div className="max-w-2xl mx-auto">
         {/* Title */}
-        <h2 className="font-display text-gold text-4xl md:text-5xl text-center text-shadow-gold mb-6">
+        <h2 className="font-display text-gold text-3xl sm:text-4xl md:text-5xl text-center text-shadow-gold mb-4 md:mb-6">
           ABOUT
         </h2>
         
-        <div className="card-navy rounded-2xl p-8 relative overflow-hidden">
+        <div className="card-navy rounded-2xl p-4 sm:p-6 md:p-8 relative overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
@@ -38,7 +38,7 @@ const AboutBox = () => {
           
           {/* Content */}
           <div className="relative z-10">
-            <pre className="font-heading text-foreground text-center whitespace-pre-wrap text-lg leading-relaxed">
+            <pre className="font-heading text-foreground text-center whitespace-pre-wrap text-sm sm:text-base md:text-lg leading-relaxed">
               {aboutText}
             </pre>
           </div>
