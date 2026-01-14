@@ -7,36 +7,53 @@ import TokenInfo from '@/components/TokenInfo';
 import FeatureCards from '@/components/FeatureCards';
 import IconStrip from '@/components/IconStrip';
 import FinalLogo from '@/components/FinalLogo';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden animate-page-load">
       {/* Navbar */}
       <Navbar />
       
       {/* Hero Section */}
-      <HeroLogo />
+      <ScrollReveal direction="scale">
+        <HeroLogo />
+      </ScrollReveal>
       
       {/* Card Gallery - Scrolling Collectibles */}
-      <CardGallery />
+      <ScrollReveal direction="up" delay={100}>
+        <CardGallery />
+      </ScrollReveal>
       
       {/* About Box */}
-      <AboutBox />
+      <ScrollReveal direction="left" delay={150}>
+        <AboutBox />
+      </ScrollReveal>
       
       {/* Prompt Box */}
-      <PromptBox />
+      <ScrollReveal direction="right" delay={150}>
+        <PromptBox />
+      </ScrollReveal>
       
       {/* Token Info */}
-      <TokenInfo />
+      <ScrollReveal direction="up" delay={100}>
+        <TokenInfo />
+      </ScrollReveal>
       
       {/* Feature Cards - Floating Angled Cards */}
-      <FeatureCards />
+      <ScrollReveal direction="scale" delay={150}>
+        <FeatureCards />
+      </ScrollReveal>
       
       {/* Icon Strip - Scrolling Icons */}
-      <IconStrip />
+      <ScrollReveal direction="up" delay={100}>
+        <IconStrip />
+      </ScrollReveal>
       
       {/* Final Logo Section */}
-      <FinalLogo />
+      <ScrollReveal direction="scale" delay={200}>
+        <FinalLogo />
+      </ScrollReveal>
     </div>
   );
 };

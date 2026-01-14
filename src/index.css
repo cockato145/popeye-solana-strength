@@ -228,6 +228,109 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 
+  /* Page Load Animation */
+  @keyframes page-fade-in {
+    0% { 
+      opacity: 0; 
+    }
+    100% { 
+      opacity: 1; 
+    }
+  }
+
+  .animate-page-load {
+    animation: page-fade-in 0.8s ease-out forwards;
+  }
+
+  /* Scroll Reveal Animation */
+  @keyframes scroll-reveal {
+    0% { 
+      opacity: 0; 
+      transform: translateY(50px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scroll-reveal-left {
+    0% { 
+      opacity: 0; 
+      transform: translateX(-50px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scroll-reveal-right {
+    0% { 
+      opacity: 0; 
+      transform: translateX(50px);
+    }
+    100% { 
+      opacity: 1; 
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scroll-reveal-scale {
+    0% { 
+      opacity: 0; 
+      transform: scale(0.8);
+    }
+    100% { 
+      opacity: 1; 
+      transform: scale(1);
+    }
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
   /* Navy Card */
   .card-navy {
     background: var(--gradient-card);
