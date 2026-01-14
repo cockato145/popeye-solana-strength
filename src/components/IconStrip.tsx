@@ -30,11 +30,11 @@ const IconStrip = () => {
               key={index} 
               className="icon-strip-item flex flex-col items-center gap-2 cursor-pointer"
             >
-              <div className="rounded-xl border-2 border-gold/40 hover:border-spinach-glow transition-all duration-300 overflow-hidden group">
+              <div className="rounded-full border-2 border-gold/40 hover:border-spinach-glow transition-all duration-300 overflow-hidden group">
                 <img 
                   src={item.src} 
                   alt={item.alt} 
-                  className="w-20 h-20 object-contain transition-transform duration-300 group-hover:scale-110"
+                  className="w-20 h-20 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
             </div>
