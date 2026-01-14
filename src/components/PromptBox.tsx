@@ -15,6 +15,11 @@ const PromptBox = () => {
   return (
     <section className="py-8 px-4">
       <div className="max-w-2xl mx-auto">
+        {/* Title */}
+        <h2 className="font-display text-gold text-4xl md:text-5xl text-center text-shadow-gold mb-6">
+          PROMPT
+        </h2>
+        
         {/* Instruction Text */}
         <p className="text-center font-heading text-foreground/90 text-lg mb-4">
           Change the name, object, and upload a reference image—choose whatever you like.
