@@ -1,6 +1,7 @@
 import HeroLogo from '@/components/HeroLogo';
 import SocialButtons from '@/components/SocialButtons';
 import CardGallery from '@/components/CardGallery';
+import AboutBox from '@/components/AboutBox';
 import PromptBox from '@/components/PromptBox';
 import TokenInfo from '@/components/TokenInfo';
 import FeatureCards from '@/components/FeatureCards';
@@ -18,6 +19,9 @@ const Index = () => {
       
       {/* Card Gallery - Scrolling Collectibles */}
       <CardGallery />
+      
+      {/* About Box */}
+      <AboutBox />
       
       {/* Prompt Box */}
       <PromptBox />
